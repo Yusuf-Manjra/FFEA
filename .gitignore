@@ -1,3 +1,18 @@
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+
 *.pyc
 *.sw?
 *.o
@@ -16,17 +31,3 @@ external/boost/tools/build/bjam
 external/boost/tools/build/bootstrap.log
 external/boost/tools/build/src/engine/bin.linuxx86_64/
 external/boost/tools/build/src/engine/bootstrap/
-
-# Visual Studoo Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
