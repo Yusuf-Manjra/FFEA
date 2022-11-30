@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   sonar:
-    name: Sonar
+    name: Sonar-Ubuntu
     runs-on: ubuntu-latest
     env:
       SONAR_SCANNER_VERSION: 4.7.0.2747
@@ -40,9 +40,9 @@ jobs:
         run: |
           cd ../
           mkdir FFEA-build && cd ./FFEA-build
-          cmake -S ../FFEA -B .
+          cmake -S ../FFEA -B ./
           cd ../FFEA
-          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }}  cmake --build ../FFEA-build --clean-first -j $(nproc)
+          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build ../FFEA-build --clean-first
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
